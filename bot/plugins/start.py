@@ -8,20 +8,20 @@ from ..screenshotbot import ScreenShotBot
 @ScreenShotBot.on_message(filters.private & filters.command("start"))
 async def start(c, m, cb=False):
     owner_id = Config.AUTH_USERS[0]
-    username = 'Ns_AnoNymous'
-    mention = '[Anonymous](https://t.me/Ns_AnoNymous)'
+    username = 'LhRfi01'
+    mention = '[IR Bots Update](https://t.me/irbotsupdate)'
     try:
         owner = await c.get_users(owner_id)
-        username = owner.username if owner.username else 'Ns_AnoNymous'
+        username = owner.username if owner.username else 'LhRfi01'
         mention = owner.mention(style="md")
     except Exception as e:
         print(e)
 
     BUTTONS = [[
         InlineKeyboardButton("My Father 🧔", url=f"https://t.me/{username}"),
-        InlineKeyboardButton("Updates Channel 🔰", url="https://t.me/Ns_bot_updates")
+        InlineKeyboardButton("Updates Channel 🔰", url="https://t.me/IRBotsUpdate")
         ],[
-        InlineKeyboardButton("Source code 😎", url="https://github.com/Ns-AnoNymouS/animated-lamp")
+        InlineKeyboardButton("Source code 😎", url="https://github.com/ilhamr0f11/Screenshot-Trimmer-IR-Bot")
         ],[
         InlineKeyboardButton("Help ⁉️", callback_data="help"),
         InlineKeyboardButton("Settings ⚙", callback_data="set+settings")
